@@ -1,0 +1,156 @@
+/* General Header Styling */
+.header {
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+/* Top Black Strip */
+.topStrip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  background-color: black;
+  z-index: 9999;
+}
+
+/* Main Header Content */
+.topHeader {
+  display: flex;
+  justify-content: center; /* Center align the header content */
+  align-items: center; /* Vertically center the items */
+  padding-top: 32px; /* Adjust for the black strip */
+  background-color: white;
+  z-index: 998;
+  position: relative;
+}
+
+/* Header Content Container */
+.headerContent {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Vertically center the items */
+  width: calc(100% - 192px); /* Full width minus 96px margin on both sides */
+  max-width: 1200px; /* Set a max width for better alignment */
+  margin: 0 96px; /* Add left and right margins of 96px */
+  padding-top: 36px; /* Add top padding of 36px */
+}
+
+/* Logo Styling */
+.logo {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Company Name Styling (LOGO text) */
+.companyName {
+  flex: 1; /* Allow it to take available space */
+  text-align: left; /* Align the text to the left */
+  margin-left: 500px; /* Adjust margin as necessary */
+}
+
+.companyName h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43.57px;
+  letter-spacing: 1px;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Icons Container Styling */
+.iconContainer {
+  display: flex; /* Set to flex to arrange icons in a row */
+  align-items: center; /* Center icons vertically */
+}
+
+.icons img {
+  width: 24px; /* Set width for all icons */
+  height: 24px; /* Set height for all icons */
+  margin-right: 24px; /* Gap between the icons */
+}
+
+.languageIcon {
+  width: 32px; /* Increased width */
+  height: 32px; /* Increased height */
+}
+
+/* Navigation Bar */
+.navbar {
+  margin-top: 60px;
+  /* Removed background color */
+  padding: 10px; /* Optional padding */
+}
+
+/* New Styles for Navigation Container */
+.navContainer {
+  display: flex;           /* Enable flexbox for the container */
+  justify-content: center; /* Center the items horizontally */
+  gap: 64px;              /* Set a gap of 64px between items */
+}
+
+.navList {
+  display: flex; /* Ensure list is a flex container */
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin: 0 15px; /* Optional margin, can be removed */
+}
+
+.navList li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Simplon Norm', sans-serif; /* Added font family */
+  font-size: 20px; /* Set font size */
+  font-weight: 700; /* Set font weight */
+  line-height: 24px; /* Set line height */
+  letter-spacing: 1px; /* Set letter spacing */
+  text-align: left; /* Align text to left */
+}
+
+.navList li a:hover {
+  color: #0070f3;
+}
+
+/* Gray Line Below Navigation */
+.grayLine {
+  height: 2px; /* Adjust the height of the line */
+  background-color: gray; /* Gray color for the line */
+  margin-top: 24px; /* Space between the navbar and the line */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 5px;
+  }
+
+  .navList {
+    flex-direction: column;
+  }
+
+  .navList li {
+    margin: 10px 0; /* Optional margin for vertical list */
+  }
+
+  .companyName {
+    text-align: left; /* Ensure text is left-aligned on smaller screens */
+  }
+}

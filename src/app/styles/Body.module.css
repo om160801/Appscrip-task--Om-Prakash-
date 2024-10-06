@@ -1,0 +1,206 @@
+/* Body Container */
+.bodyContainer {
+  padding: 40px 20px; /* Adjusted padding for better responsiveness */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Centered Text */
+.centerText {
+  text-align: center;
+  margin-bottom: 40px; /* Increased margin for better spacing */
+}
+
+/* Filter and Sort Section */
+.filterSortWrapper {
+  margin-bottom: 30px; /* Added spacing between filters and product grid */
+}
+
+.filterSortContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Filter Options */
+.filterOption {
+  display: flex;
+  justify-content: space-between; /* Positions 'Color' on the left and arrow on the right */
+  align-items: center; /* Vertically centers the items */
+  padding: 8px 0; /* Optional: Adjust padding to give some space */
+}
+
+.filterArrowImg {
+  margin-left: auto; /* Ensures the arrow stays on the far right */
+  cursor: pointer; /* Optional: Shows the pointer on hover */
+}
+
+/* Left Options */
+.leftOptions {
+  display: flex;
+  align-items: center;
+  font-size: 14px; /* Reduced font size for better layout */
+}
+
+/* Button to Hide Filters */
+.hideFilterBtn {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hideFilterBtn:hover {
+  background-color: #e1e1e1;
+}
+
+.leftArrowImg {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+/* Right Options */
+.rightOptions {
+  font-size: 14px;
+}
+
+/* Dropdown Wrapper */
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.downArrowImg {
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdownMenu div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownMenu div:hover {
+  background-color: #f1f1f1;
+}
+
+/* Main Content Area */
+.mainContent {
+  display: flex;
+  gap: 20px;
+}
+
+/* Section for Sidebar/Filters */
+.Section {
+  width: 20%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productSection {
+  flex: 1; /* Ensure it takes up remaining space */
+  width: calc(100% - 1200px); /* Replace <FILTER_WIDTH> with the width of your filter section */
+  transition: width 0.3s ease; /* Smooth transition when filter is hidden */
+}
+
+/* Adjust the styles for full width when filter is hidden */
+.fullWidthProductSection {
+  width: calc(100% - 1200px); /* Keep the width same */
+}
+
+/* You can add additional styles as necessary */
+
+
+/* Product Grid Layout */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.fourColumnGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Individual Product Card */
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.productImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Product Information */
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+/* Ensure text wraps */
+.productName,
+.productPricing {
+  white-space: normal; /* Allow text to wrap */
+  overflow-wrap: break-word; /* Break long words onto the next line if necessary */
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.productPricing {
+  display: flex; /* or inline-flex */
+  align-items: center; /* vertically center the icon with text */
+}
+
+.heartIcon {
+  margin-left: 5px; /* add space between text and icon */
+}
+
